@@ -19,6 +19,34 @@ btn1.addEventListener('click', function(){
     var doPhnPriceCount = parseFloat(phnPriceCount)
 
     document.getElementById('phn-price').innerText = phnPriceNum + doPhnPriceCount
+
+    // total section
+
+    let phnPriceAmount = document.getElementById('phn-price').innerText;
+    let phnPriceNumber = parseFloat(phnPriceAmount);
+
+    let coverPriceAmount = document.getElementById('cover-price').innerText;
+    let coverPriceNumber = parseFloat(coverPriceAmount);
+
+    let subTotal = phnPriceNumber + coverPriceNumber;
+    document.getElementById('sub-total').innerText = subTotal;
+
+    //tax area
+
+    let phnTax = document.getElementById('phn-price').innerText;
+    let phnTaxAdd = parseFloat(phnTax);
+
+    let coverTax = document.getElementById('cover-price').innerText;
+    let coverTaxAdd = parseFloat(coverTax);
+
+    let phnTaxAmount =  0.05 * phnTaxAdd
+    let coverTaxAmount = 0.02 * coverTaxAdd
+
+    let tax = phnTaxAmount + coverTaxAmount
+
+    document.getElementById('tax').innerText = Math.round(tax)
+
+    document.getElementById('total').innerText = Math.round(subTotal + tax);
 })
 
 
@@ -38,6 +66,33 @@ btn2.addEventListener('click', function(){
     let m = phnPriceNum - doPhnPriceCount;
     let n = Math.abs(m)
     document.getElementById('phn-price').innerText = n;
+
+    //total
+
+        let phnPriceAmount = document.getElementById('phn-price').innerText;
+        let phnPriceNumber = parseFloat(phnPriceAmount);
+
+        let coverPriceAmount = document.getElementById('cover-price').innerText;
+        let coverPriceNumber = parseFloat(coverPriceAmount);
+
+        let subTotal = phnPriceNumber + coverPriceNumber;
+        document.getElementById('sub-total').innerText = subTotal;
+        
+
+        let phnTax = document.getElementById('phn-price').innerText;
+        let phnTaxAdd = parseFloat(phnTax);
+
+        let coverTax = document.getElementById('cover-price').innerText;
+        let coverTaxAdd = parseFloat(coverTax);
+
+        let phnTaxAmount =  0.05 * phnTaxAdd
+        let coverTaxAmount = 0.02 * coverTaxAdd
+
+        let tax = phnTaxAmount + coverTaxAmount
+
+        document.getElementById('tax').innerText = Math.round(tax)
+
+        document.getElementById('total').innerText = Math.round(subTotal + tax);
     }
 })
 
@@ -62,6 +117,34 @@ const coverPriceNum = parseFloat(coverPrice);
        var doCoverPriceCount = parseFloat(coverPriceCount);
    
        document.getElementById('cover-price').innerText = coverPriceNum + doCoverPriceCount
+
+       // total area
+
+        let phnPriceAmount = document.getElementById('phn-price').innerText;
+        let phnPriceNumber = parseFloat(phnPriceAmount);
+
+        let coverPriceAmount = document.getElementById('cover-price').innerText;
+        let coverPriceNumber = parseFloat(coverPriceAmount);
+
+        let subTotal = phnPriceNumber + coverPriceNumber;
+        document.getElementById('sub-total').innerText = subTotal;
+        
+
+        let phnTax = document.getElementById('phn-price').innerText;
+        let phnTaxAdd = parseFloat(phnTax);
+
+        let coverTax = document.getElementById('cover-price').innerText;
+        let coverTaxAdd = parseFloat(coverTax);
+
+        let phnTaxAmount =  0.05 * phnTaxAdd
+        let coverTaxAmount = 0.02 * coverTaxAdd
+
+        let tax = phnTaxAmount + coverTaxAmount
+
+        document.getElementById('tax').innerText = Math.round(tax)
+
+        document.getElementById('total').innerText = Math.round(subTotal + tax);
+
    })
    
    
@@ -73,7 +156,7 @@ const coverPriceNum = parseFloat(coverPrice);
        var inputMinusNum = parseFloat(inputMinus);
    
        if(inputMinusNum>0){
-           document.getElementById('input-num').value = inputMinusNum-1;
+           document.getElementById('input-num2').value = inputMinusNum-1;
    
            var coverPriceCount = document.getElementById('cover-price').innerText
            var docoverPriceCountCount = parseFloat(coverPriceCount);
@@ -81,5 +164,33 @@ const coverPriceNum = parseFloat(coverPrice);
        let x = coverPriceNum - docoverPriceCountCount;
        let y = Math.abs(x)
        document.getElementById('cover-price').innerText = y;
+
+       //total 
+
+            let phnPriceAmount = document.getElementById('phn-price').innerText;
+            let phnPriceNumber = parseFloat(phnPriceAmount);
+
+            let coverPriceAmount = document.getElementById('cover-price').innerText;
+            let coverPriceNumber = parseFloat(coverPriceAmount);
+
+            let subTotal = phnPriceNumber + coverPriceNumber;
+            document.getElementById('sub-total').innerText = subTotal;
+            
+
+            let phnTax = document.getElementById('phn-price').innerText;
+        let phnTaxAdd = parseFloat(phnTax);
+
+        let coverTax = document.getElementById('cover-price').innerText;
+        let coverTaxAdd = parseFloat(coverTax);
+
+        let phnTaxAmount =  0.05 * phnTaxAdd
+        let coverTaxAmount = 0.02 * coverTaxAdd
+
+        let tax = phnTaxAmount + coverTaxAmount
+
+        document.getElementById('tax').innerText = tax;
+
+        document.getElementById('total').innerText = subTotal + tax;
        }
    })
+
