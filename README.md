@@ -1,3 +1,3 @@
 # phone-cart
-site link:
+site link = 
 https://md-habibullah.github.io/phone-cart/
